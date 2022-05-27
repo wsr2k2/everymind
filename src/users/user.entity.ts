@@ -6,20 +6,19 @@ export class User extends BaseEntity {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
-    @Column()
+    @Column({ nullable: false, type: 'varchar', length: 200 })
     name: string;
 
-    @Column()
+    @Column({ nullable: false, type: 'varchar', length: 200 })
     email: string;
 
-    @Column()
+    @Column({ nullable: false, type: 'varchar', length: 15 })
     phone: string;
-
-    @Column()
+    @Column({ nullable: false })
     password: string;
 
-    @Column()
-    passwordConfirmation: string;
+    @Column({ nullable: false })
+    salt: string;
 
     @CreateDateColumn()
     createdAt: Date;

@@ -49,3 +49,25 @@ Abrindo o adminer, teremos a tabela de users como abaixo:
 
 Criamos agora nosso repositório, na pasta users crie um arquivo com o nome: users.repository.ts
 
+ficando assim:
+
+Precisamos agora adicionar nosso repositório no user.modules.ts ficando assim:
+
+
+Agora podemos criar nossa camada de serviço do módulo com o comando: nest g service users --no-spec (assim não criando os arquivos de testes *--no-spec) e automaticamente adiciona o arquivo no user.module.ts
+
+Agora vamos criar uma pasta em users chamada DTOS e dentro dessa pasta o arquivo create-user.dto.ts
+
+ficando assim:
+
+Após as alterações o nosso user.repository.ts ficará assim:
+
+Agora vamos chamar esse método no service para a criação do usuário
+
+
+Por último vamos criar a rota que irá realizar o processo, criamos o user.controller com o comando
+nest g controller users --no-spec
+
+Vamos criar um dto para retornar o usuário criado;
+
+Dentro de DTOS criar um novo arquivo com o nome: return-user.dto.ts
