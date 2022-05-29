@@ -13,8 +13,8 @@ export class AuthService {
         private jwtService: JwtService,
     ) {}
 
-    async signIn(loginDto: LoginUserDto) {
-        const user = await this.userRepository.loginUser(loginDto);
+    async signIn(loginUserDto: LoginUserDto) {
+        const user = await this.userRepository.loginUser(loginUserDto);
 
         if (user === null) {
             throw new UnauthorizedException('Email or password is not correct')

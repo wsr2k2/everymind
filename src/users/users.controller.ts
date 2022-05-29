@@ -1,9 +1,8 @@
-import { Controller, Post, Body, ValidationPipe, UseGuards } from '@nestjs/common';
-import { CreateUserDto } from './dtos/create-user.dto';
-import { UsersService } from './users.service';
-import { ReturnUserDto } from './dtos/return-user.dto';
-import { AuthGuard } from '@nestjs/passport';
+import { Body, Controller, Post, ValidationPipe } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
+import { CreateUserDto } from './dtos/create-user.dto';
+import { ReturnUserDto } from './dtos/return-user.dto';
+import { UsersService } from './users.service';
 
 @ApiTags('Users')
 @Controller('users')
@@ -12,7 +11,7 @@ export class UsersController {
 
   @Post()
   async createAdminUser(
-    @Body(ValidationPipe) createUserDto: CreateUserDto,
+    @Body() createUserDto: CreateUserDto,
   ): Promise<ReturnUserDto> {
     const user = await this.usersService.createUser(createUserDto);
     return {
