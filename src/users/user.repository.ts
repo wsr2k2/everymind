@@ -3,6 +3,7 @@ import { CreateUserDto } from './dtos/create-user.dto';
 import { User } from './user.entity';
 import * as bcrypt from 'bcrypt';
 import { ConflictException, InternalServerErrorException } from '@nestjs/common';
+import { LoginUserDto } from 'src/auth/dto/login.dto';
 
 @EntityRepository(User)
 export class UserRepository extends Repository<User> {
@@ -31,6 +32,17 @@ export class UserRepository extends Repository<User> {
                   'Erro ao salvar o usuário no banco de dados',
                 )
             }
+        }
+    }
+
+    async loginUser(loginUserDto: LoginUserDto): Promise<User> {
+        const { email, password } = loginUserDto;
+        const user = await this.findOne({ email });
+
+        if (user && (await user.checkPassword(password))) {
+            return user;
+        } else {
+            return null;
         }
     }
     private async hashPassword(password: string, salt: string): Promise<string> {
