@@ -235,17 +235,13 @@ No retorno será exibido o token para o usuário, copie esse token para poder ac
 
 
 
-Agora para acessar as informações desse usuário e conferir se todas as informações que foram passadas estão salvas corretamente, clicar em ``auth/logged`` logo em seguida em ``Try it out`` , sendo mostrado essa tela:
-
-
-
-![alt foto logged](https://github.com/wsr2k2/everymind/blob/master/src/public/images/logged.png?raw=true)
-
-Agora clique em ``execute`` e .... deu erro!
+Agora para acessar as informações desse usuário e conferir se todas as informações que foram passadas estão salvas corretamente, clicar em ``auth/logged`` logo em seguida em ``Try it out`` , agora clique em ``execute`` e .... deu erro!
 
 
 
 ![alt foto naoAutorizado](https://github.com/wsr2k2/everymind/blob/master/src/public/images/nao%20autorizado.png?raw=true)
+
+
 
 Como essa rota está protegida, você precisa adicionar o token gerado no ``signin`` para poder acessar os dados cadastrados.
 
@@ -257,9 +253,13 @@ Então no topo da página, canto direito, clique em ``Authorize`` e no campo ``V
 
 
 
-![alt foto logeedOk](https://github.com/wsr2k2/everymind/blob/master/src/public/images/logged.png?raw=true)
+
 
 Retornando os dados do usuário logado, podendo confirmar que os dados foram salvos com exatidão.
+
+
+
+![alt foto logeedOk](https://github.com/wsr2k2/everymind/blob/master/src/public/images/logged.png?raw=true)
 
 
 
