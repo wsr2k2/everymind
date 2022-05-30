@@ -74,6 +74,8 @@ async function bootstrap() {
 bootstrap();
 ```
 
+
+
 Para poder criar um modelo do que a aplicação espera que o usuário coloque nos campos permitidos, iremos utilizar um decorator do Swagger no arquivo ``create-user.dto.ts`` dentro da pasta users/dto, chamado ``@ApiProperty()`` , utilizamos outros decorators do ``class-validator`` afim de deixar nossa aplicação mais segura, pois, não serão permitidos cadastros que não atendas as necessidades conforme cada decorator (exemplo: campos em branco não são permitidos, máximo ou mínimo de caracteres, senha com itens obrigatórios, tipo de dados esperado, entre outros), com o qual os campos com esse decorator irão aparecer na tela do Swagger e podemos ir mais além, adicionando mensagens e modelos pré preenchidos do que espera a aplicação conforme abaixo:
 
 ```javascript
@@ -158,13 +160,13 @@ export class CreateUserDto {
 }
 ```
 
-Ao abrir o Swagger será mostrado assim:
-
-FOTO SW 3
-
-https://github.com/wsr2k2/everymind/blob/master/src/public/images/sw%203.png?raw=true
 
 
+Ao carregar o Swagger será mostrado assim:
+
+
+
+![alt foto sw3](https://github.com/wsr2k2/everymind/blob/master/src/public/images/sw%203.png?raw=true)
 
 
 
@@ -183,8 +185,6 @@ Ao acessar, será exibida essa tela:
 
 
 
-FOTO SW 1
-
 ![alt foto sw1](https://github.com/wsr2k2/everymind/blob/master/src/public/images/sw%201.png?raw=true)
 
 
@@ -193,9 +193,7 @@ Agora iremos cadastrar um novo usuário, clicando em irá abrir essa tela:
 
 
 
-FOTO SW 2
-
-https://github.com/wsr2k2/everymind/blob/master/src/public/images/sw%202.png?raw=true 
+![alt foto sw2](https://github.com/wsr2k2/everymind/blob/master/src/public/images/sw%202.png?raw=true )
 
 
 
@@ -203,17 +201,17 @@ Agora clicar em ``try it out`` e inserir os dados de usuário para cadastrar:
 
 Exemplo:
 
-FOTO CADASTRO DE USUARIO
 
-https://github.com/wsr2k2/everymind/blob/master/src/public/images/cadastro%20de%20usuario.png?raw=true
+
+![alt foto cadUser](https://github.com/wsr2k2/everymind/blob/master/src/public/images/cadastro%20de%20usuario.png?raw=true)
 
 
 
 Se todas as informações estiverem corretas, ao clicar em ``Execute`` o usuário será salvo no banco de dados.
 
-FOTO RETORNO DE CADASTRO
 
-https://github.com/wsr2k2/everymind/blob/master/src/public/images/retorno%20de%20cadastro.png?raw=true
+
+![alt foto user](https://github.com/wsr2k2/everymind/blob/master/src/public/images/retorno%20de%20cadastro.png?raw=true)
 
 
 
@@ -221,9 +219,9 @@ Agora podemos realizar o ``login`` com as informações do usuário cadastrado:
 
 Clicar em ``auth/signin`` logo em seguida em ``Try it out`` e irá mostrar uma tela assim:
 
-FOTO LOGIN
 
-https://github.com/wsr2k2/everymind/blob/master/src/public/images/login.png?raw=true
+
+![alt foto login](https://github.com/wsr2k2/everymind/blob/master/src/public/images/login.png?raw=true)
 
 
 
@@ -231,23 +229,23 @@ Insira os dados de login conforme solicita e clique em ``Execute``
 
 No retorno será exibido o token para o usuário, copie esse token para poder acessar a rota de ``logged`` a seguir:
 
-FOTO TOKEN
 
-https://github.com/wsr2k2/everymind/blob/master/src/public/images/token.png?raw=true
+
+![alt foto token](https://github.com/wsr2k2/everymind/blob/master/src/public/images/token.png?raw=true)
 
 
 
 Agora para acessar as informações desse usuário e conferir se todas as informações que foram passadas estão salvas corretamente, clicar em ``auth/logged`` logo em seguida em ``Try it out`` , sendo mostrado essa tela:
 
-FOTO LOGGED
 
-https://github.com/wsr2k2/everymind/blob/master/src/public/images/logged.png?raw=true
+
+![alt foto logged](https://github.com/wsr2k2/everymind/blob/master/src/public/images/logged.png?raw=true)
 
 Agora clique em ``execute`` e .... deu erro!
 
-FOTO NÃO AUTORIZADO
 
-https://github.com/wsr2k2/everymind/blob/master/src/public/images/nao%20autorizado.png?raw=true
+
+![alt foto naoAutorizado](https://github.com/wsr2k2/everymind/blob/master/src/public/images/nao%20autorizado.png?raw=true)
 
 Como essa rota está protegida, você precisa adicionar o token gerado no ``signin`` para poder acessar os dados cadastrados.
 
@@ -257,9 +255,9 @@ Então no topo da página, canto direito, clique em ``Authorize`` e no campo ``V
 
 
 
-FOTO LOGGED
 
 
+![alt foto logeedOk](https://github.com/wsr2k2/everymind/blob/master/src/public/images/logged.png?raw=true)
 
 Retornando os dados do usuário logado, podendo confirmar que os dados foram salvos com exatidão.
 
