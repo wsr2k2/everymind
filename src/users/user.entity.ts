@@ -15,6 +15,25 @@ export class User extends BaseEntity {
 
     @Column({ nullable: false, type: 'varchar', length: 15 })
     phone: string;
+
+    @Column({ nullable: false, type: 'varchar', length: 200 })
+    street: string;
+
+    @Column({ nullable: false, type: 'varchar', length: 7 })
+    number: string;
+
+    @Column({ nullable: false, type: 'varchar', length: 200 })
+    complement: string;
+
+    @Column({ nullable: false, type: 'varchar', length: 200 })
+    district: string;
+
+    @Column({ nullable: false, type: 'varchar', length: 200 })
+    city: string;
+
+    @Column({ nullable: false, type: 'varchar', length: 200 })
+    state: string;
+
     @Column({ nullable: false })
     password: string;
 
