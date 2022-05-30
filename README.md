@@ -162,6 +162,10 @@ Ao abrir o Swagger será mostrado assim:
 
 FOTO SW 3
 
+https://github.com/wsr2k2/everymind/blob/master/src/public/images/sw%203.png?raw=true
+
+
+
 
 
 No arquivo ``users.controller.ts`` iremos colocar o decorator ``@ApiTags('Users')`` logo acima do ``@Controller`` assim quando rodar a aplicação, o Swagger irá separar uma aba com todas as rotas de Users. Faremos também essa alteração no arquivo ``auth.controller.ts`` colocando o decorator ``@ApiTags('Auth')`` ficando todas as rotas dentro dessa aba.
@@ -181,6 +185,8 @@ Ao acessar, será exibida essa tela:
 
 FOTO SW 1
 
+![alt foto sw1](https://github.com/wsr2k2/everymind/blob/master/src/public/images/sw%201.png?raw=true)
+
 
 
 Agora iremos cadastrar um novo usuário, clicando em irá abrir essa tela:
@@ -188,6 +194,8 @@ Agora iremos cadastrar um novo usuário, clicando em irá abrir essa tela:
 
 
 FOTO SW 2
+
+https://github.com/wsr2k2/everymind/blob/master/src/public/images/sw%202.png?raw=true 
 
 
 
@@ -197,11 +205,15 @@ Exemplo:
 
 FOTO CADASTRO DE USUARIO
 
+https://github.com/wsr2k2/everymind/blob/master/src/public/images/cadastro%20de%20usuario.png?raw=true
+
 
 
 Se todas as informações estiverem corretas, ao clicar em ``Execute`` o usuário será salvo no banco de dados.
 
 FOTO RETORNO DE CADASTRO
+
+https://github.com/wsr2k2/everymind/blob/master/src/public/images/retorno%20de%20cadastro.png?raw=true
 
 
 
@@ -211,6 +223,8 @@ Clicar em ``auth/signin`` logo em seguida em ``Try it out`` e irá mostrar uma t
 
 FOTO LOGIN
 
+https://github.com/wsr2k2/everymind/blob/master/src/public/images/login.png?raw=true
+
 
 
 Insira os dados de login conforme solicita e clique em ``Execute``
@@ -219,15 +233,21 @@ No retorno será exibido o token para o usuário, copie esse token para poder ac
 
 FOTO TOKEN
 
+https://github.com/wsr2k2/everymind/blob/master/src/public/images/token.png?raw=true
+
 
 
 Agora para acessar as informações desse usuário e conferir se todas as informações que foram passadas estão salvas corretamente, clicar em ``auth/logged`` logo em seguida em ``Try it out`` , sendo mostrado essa tela:
 
 FOTO LOGGED
 
+https://github.com/wsr2k2/everymind/blob/master/src/public/images/logged.png?raw=true
+
 Agora clique em ``execute`` e .... deu erro!
 
 FOTO NÃO AUTORIZADO
+
+https://github.com/wsr2k2/everymind/blob/master/src/public/images/nao%20autorizado.png?raw=true
 
 Como essa rota está protegida, você precisa adicionar o token gerado no ``signin`` para poder acessar os dados cadastrados.
 
