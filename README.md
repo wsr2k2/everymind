@@ -245,21 +245,21 @@ Agora para acessar as informações desse usuário e conferir se todas as inform
 
 Como essa rota está protegida, você precisa adicionar o token gerado no ``signin`` para poder acessar os dados cadastrados.
 
-
-
-Então no topo da página, canto direito, clique em ``Authorize`` e no campo ``Value`` insira o token copiado previamente e clique em ``Authorize e depois em close``. Agora podemos novamente realizar a requisição no ``auth/logged`` e veremos que nessa chamada irá correr tudo ok!
-
+Então no topo da página, canto direito, clique em ``Authorize`` e no campo ``Value`` insira o token copiado previamente e clique em ``Authorize e depois em close``. 
 
 
 
+![alt foto validToken](https://github.com/wsr2k2/everymind/blob/master/src/public/images/validando%20o%20token.png?raw=true)
+
+
+
+Agora podemos novamente realizar a requisição no ``auth/logged`` e veremos que nessa chamada irá correr tudo ok!
+
+![alt foto logeedOk](https://github.com/wsr2k2/everymind/blob/master/src/public/images/logged.png?raw=true)
 
 
 
 Retornando os dados do usuário logado, podendo confirmar que os dados foram salvos com exatidão.
-
-
-
-![alt foto logeedOk](https://github.com/wsr2k2/everymind/blob/master/src/public/images/logged.png?raw=true)
 
 
 
