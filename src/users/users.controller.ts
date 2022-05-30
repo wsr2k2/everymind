@@ -9,14 +9,14 @@ import { UsersService } from './users.service';
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
-  @Post()
+  @Post('/signup')
   async createAdminUser(
     @Body() createUserDto: CreateUserDto,
   ): Promise<ReturnUserDto> {
     const user = await this.usersService.createUser(createUserDto);
     return {
       user,
-      message: 'ser registered successfully',
+      message: 'User registered successfully',
     };
   }
 }

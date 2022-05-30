@@ -29,7 +29,7 @@ export class CreateUserDto {
   @IsString()
   street: string;
 
-  @ApiProperty({example: 'Number'})
+  @ApiProperty({example: '123'})
   @IsNotEmpty({message: 'The number must be informed'})
   @MaxLength(7, {message: 'Number must be less than 7 characters'})
   @IsNumberString()

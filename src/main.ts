@@ -12,8 +12,8 @@ async function bootstrap() {
   .setDescription('Api para cadastro e login de usuários para teste da Everymind')
   .setVersion('1.0')
   .addBearerAuth()
-  .addTag('Auth')
   .addTag('Users')
+  .addTag('Auth')
   .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('home', app, document);
